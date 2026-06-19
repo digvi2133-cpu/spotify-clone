@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+     <button id="menuBtn">☰</button>
+    <div class="container">
+
+        <!-- LEFT SIDEBAR -->
+        <div class="left">
+
+            <!-- TOP NAV -->
+            <div class="nav">
+                <ul>
+                    <li class="logo"><img src="logo.svg" alt=""></li>
+                    <li class="nav-item active"><img src="home.svg"> Home</li>
+                    <li class="nav-item"><img src="search.svg"> Search</li>
+                </ul>
+            </div>
+
+            <!-- LIBRARY -->
+            <div class="library">
+                <div class="lib-top">
+                    <h3>Your Library</h3>
+                    <button>+</button>
+                </div>
+                <div class="box">
+                    <h4>Create your first playlist</h4>
+                    <p>It's easy, we'll help you</p>
+                    <button>Create playlist</button>
+                </div>
+
+                <div class="box">
+                    <h4>Let's find some podcasts to follow</h4>
+                    <p>We'll keep you updated on new episodes</p>
+                    <button>Browse podcasts</button>
+                </div>
+            </div>
+
+            <!-- PLAYLIST BOX -->
+
+
+            <!-- LINKS -->
+            <div class="legal">
+                <div class="links">
+                    <span>Legal</span>
+                    <span>Safety & Privacy Center</span>
+                    <span>Privacy Policy</span>
+                    <span>About Ads</span>
+                </div>
+
+                <button class="language-btn">🌐 English</button>
+            </div>
+
+        </div>
+        <!-- RIGHT SECTION -->
+        <div class="right">
+           
+            <div class="upper">
+                <h3>Premium Download |</h3> <button>Sign Up</button> <button>Log In</button>
+            </div>
+            <section class="home-page"> <!-- Music Player -->
+                <div class="player">
+                    <div class="song-info"> No song selected </div>
+                    <div class="controls"> <button id="prev">⏮</button> <button id="play">▶</button> <button
+                            id="next">⏭</button> </div>
+                    <div class="volume"> <input type="range" id="volume" min="0" max="100" value="50"> </div> <audio
+                        id="audioPlayer"></audio>
+                </div> <!-- Trending Songs Header -->
+                <div class="section-header">
+                    <h2>Trending Songs</h2>
+                    <div class="scroll-buttons"> <button id="leftBtn">◀</button> <button id="rightBtn">▶</button> </div>
+                </div> <!-- Cards -->
+                <div class="card-container">
+                    <div class="card" data-index="0"> <img src="cover.jpg" alt="">
+                        <h4>Song 1</h4>
+                        <p>Artist 1</p>
+                        <div class="play-btn">▶</div>
+                    </div>
+                    <div class="card" data-index="1"> <img src="cover.jpg" alt="">
+                        <h4>Song 2</h4>
+                        <p>Artist 2</p>
+                        <div class="play-btn">▶</div>
+                    </div>
+                    <div class="card" data-index="2"> <img src="cover.jpg" alt="">
+                        <h4>Song 3</h4>
+                        <p>Artist 3</p>
+                        <div class="play-btn">▶</div>
+                    </div>
+                    <div class="card"> <img src="cover.jpg" alt="">
+                        <h4>Song Name</h4>
+                        <p>Artist Name</p>
+                        <div class="play-btn">▶</div>
+                    </div>
+                    <div class="card"> <img src="cover.jpg" alt="">
+                        <h4>Song Name</h4>
+                        <p>Artist Name</p>
+                        <div class="play-btn">▶</div>
+                    </div>
+                    <div class="card"> <img src="cover.jpg" alt="">
+                        <h4>Song Name</h4>
+                        <p>Artist Name</p>
+                        <div class="play-btn">▶</div>
+                    </div>
+                    <div class="card"> <img src="cover.jpg" alt="">
+                        <h4>Song Name</h4>
+                        <p>Artist Name</p>
+                        <div class="play-btn">▶</div>
+                    </div>
+                    <div class="card"> <img src="cover.jpg" alt="">
+                        <h4>Song Name</h4>
+                        <p>Artist Name</p>
+                        <div class="play-btn">▶</div>
+                    </div>
+                </div>
+                <div class="section">
+
+                    <div class="section-header">
+                        <h2>Popular Artists</h2>
+
+                        <div class="scroll-buttons">
+                            <button class="scroll-left">◀</button>
+                            <button class="scroll-right">▶</button>
+                        </div>
+                    </div>
+
+                    <div class="scroll-row" id="artistContainer"></div>
+
+                </div>
+                <div class="section-header">
+                    <h2>Popular Albums and Singers</h2>
+                    <div class="scroll-buttons">
+                        <button class="scroll-left">◀</button>
+                        <button class="scroll-right">▶</button>
+                    </div>
+                </div>
+                <div class="scroll-row" id="albumContainer"></div>
+                <!-- RADIO -->
+                <div class="section">
+                    <div class="section-header">
+                        <h2>Popular Radio</h2>
+                        <div class="scroll-buttons">
+                            <button class="scroll-left">◀</button>
+                            <button class="scroll-right">▶</button>
+                        </div>
+                    </div>
+
+                    <div class="scroll-row" id="radioContainer"></div>
+                </div>
+
+                <!-- CHARTS -->
+                <div class="section">
+                    <div class="section-header">
+                        <h2>Featured Charts</h2>
+                        <div class="scroll-buttons">
+                            <button class="scroll-left">◀</button>
+                            <button class="scroll-right">▶</button>
+                        </div>
+                    </div>
+
+                    <div class="scroll-row" id="chartsContainer"></div>
+                </div>
+
+                <!-- FOOTER -->
+                <footer class="footer">
+
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li>About</li>
+                            <li>Jobs</li>
+                            <li>For the Record</li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Communities</h4>
+                        <ul>
+                            <li>For Artists</li>
+                            <li>Developers</li>
+                            <li>Advertising</li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Useful Links</h4>
+                        <ul>
+                            <li>Support</li>
+                            <li>Free Mobile App</li>
+                        </ul>
+                    </div>
+
+                </footer>
+        </div>
+
+    </div>
+
+    <script src="scrpt.js"></script>
+
+</body>
+
+</html>
